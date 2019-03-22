@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Övning i XML/DTD</title>
-  <meta name="description" content="Övning i XML/DTD">
+  <title>4 Giltig XML | Övning i XML/DTD</title>
+  <meta name="description" content="4 Giltig XML | Övning i XML/DTD">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Övning i XML/DTD" />
+  <meta property="og:title" content="4 Giltig XML | Övning i XML/DTD" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Övning i XML/DTD" />
+  <meta name="twitter:title" content="4 Giltig XML | Övning i XML/DTD" />
   
   
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="att-skriva-xml-kod.html">
+<link rel="prev" href="valformad-xml.html">
+<link rel="next" href="utoka-filens-innehall.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -164,30 +164,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Övning i XML/DTD</h1>
-<p class="author"><em>Yoshiko Nordeborg</em></p>
-<p class="author"><em>Björn Ekström</em></p>
-</div>
-<div id="inledning" class="section level1">
-<h1><span class="header-section-number">1</span> Inledning</h1>
-<p>Den här övningen syftar till att ge en inledande förståelse till XML, <em>Extensible markup language</em>.</p>
-<p>Du kommer att lära dig:</p>
+<div id="giltig-xml" class="section level1">
+<h1><span class="header-section-number">4</span> Giltig XML</h1>
+<p>Vid det här laget har du lärt dig hur ett fel kan ser ut i EditiX/XMLSpear
+och en webbläsare. Dessvärre kan ett fel synas enbart i webbläsaren
+också, men detta kommer vi ta upp i samband med SKOS.</p>
+<p>Lägg nu till en länk till en DTD-fil, books.dtd, i XML-filen.</p>
+<p>Dokumenttyp-deklarationen ska skrivas in i XML-filen efter xml-deklarationen på det här viset:</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="dt">&lt;!DOCTYPE </span>collection SYSTEM &quot;books.dtd&quot;<span class="dt">&gt;</span></code></pre>
+<p>Spara XML-filen i XML-redigeraren. Vad säger den? Vad säger
+webbläsaren?</p>
+<blockquote>
+<p>Om du använder XMLSpear: Precis ovanför koden finns lite olika alternativ. Klicka i cirkeln som står före &quot;dtd&quot; och därefter på den gröna bocken lite till vänster om den. Vad händer? Klicka på Cancel för att stänga ned rutan som dyker upp.</p>
+</blockquote>
+<p>Felmeddelandena du får nu beror på att du säger till programmet att
+följa reglerna som finns i filen books.dtd, men programmet kan inte
+hitta den filen. Därför måste du ladda ner filen books.dtd från
+kursaktiviteten i Ping Pong (Dokument -&gt; Tesauruskonstruktion -&gt;
+XML/DTD/SKOS-filer) och spara den i samma mapp som XML-filen. Om DTD-filen ligger i
+samma mapp som XML-filen så räcker det med filnamnet för att editorn ska
+hitta den.</p>
+<p>Kontrollera på nytt så att inget felmeddelande genereras.</p>
+<blockquote>
+<p>Om du använder XMLSpear så behöver du stänga filen och öppna den på nytt för att programmet ska &quot;förstå&quot; att den kan hitta DTD-filen. Uppdatera också webbläsaren. Visas XML-filen korrekt? Om du inte får några felmeddelanden är XML-filen både välformad och giltig.</p>
+</blockquote>
+<div id="bryt-mot-reglerna-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Bryt mot reglerna!</h2>
+<p>Nu ska vi prova några olika sätt att bryta mot reglerna i DTD:n.</p>
 <ul>
-<li>Hur XML-kod skrivs och kontrolleras.</li>
-<li>Vad välformad XML innebär.</li>
-<li>Vad giltig XML innebär.</li>
-<li>Hur du kan utöka en XML-fil och hålla den välformad och giltig.</li>
+<li><p>Ta bort hela <code>title</code>-elementet. Spara. Kontrollera vad som händer i
+EditiX/XMLSpear (med den gröna bocken i XMLSpear eller <code>Ctrl</code> + <code>K</code> i
+EditiX) och i webbläsaren. Fundera varför det blir som det blir genom
+att öppna DTD-filen och tolka reglerna/definitionerna där. Lägg tillbaka
+<code>title</code>-elementet efter <code>isbn</code>-elementet och kontrollera på nytt.</p></li>
+<li><p>Ta bort hela <code>isbn</code>-elementet. Spara. Kontrollera vad som händer i
+EditiX/XMLSpear och i webbläsaren. Varför blir det som det blev? Lägg
+tillbaka <code>isbn</code>-elementet mellan <code>book</code>- och <code>title</code>-elementen och
+spara/uppdatera.</p></li>
+<li><p>Skriv in ett <code>title</code>-element till efter det andra <code>title</code>-elementet.
+Spara. Kontrollera vad som händer i EditiX och i webbläsaren. Varför
+blir det som det blir? Rätta till och spara/uppdatera.</p></li>
+<li><p>Byt plats på <code>isbn</code>-elementet och <code>title</code>-elementet. Spara och
+kontrollera. Varför blir det som det blir? Rätta till och
+spara/uppdatera.</p></li>
+<li><p>Lägg till ett nytt <code>page</code>-element efter det ursprungliga
+<code>page</code>-elementet. Spara och kontrollera. Varför blir det som det blir?</p></li>
+<li><p>Lägg till ett <code>dimension</code>-element med något värde i efter något
+<code>page</code>-element. Spara och kontrollera. Varför blir det som det blir? Var
+kan du flytta <code>dimension</code>-elementet utan att få ett felmeddelande?</p></li>
+<li><p>Ta bort värdet av <code>page</code>-elementet, det vill säga <code>&quot;454 sidor&quot;</code>. Spara och
+kontrollera. Varför blir det som det blir? Rätta till och
+spara/uppdatera.</p></li>
+<li><p>Ta bort attributet i <code>book</code>-elementets starttagg. Spara och kontrollera.
+Varför blir det som det blir? Rätta till och spara/uppdatera.</p></li>
+<li><p>Ta bort attributet i <code>author</code>-elementets starttagg. Spara och kontrollera.
+Varför blir det som det blir? Rätta till och spara/uppdatera.</p></li>
 </ul>
-<p>Lycka till!</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="att-skriva-xml-kod.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="valformad-xml.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="utoka-filens-innehall.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Övning i XML/DTD</title>
-  <meta name="description" content="Övning i XML/DTD">
+  <title>2 Att skriva XML-kod | Övning i XML/DTD</title>
+  <meta name="description" content="2 Att skriva XML-kod | Övning i XML/DTD">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Övning i XML/DTD" />
+  <meta property="og:title" content="2 Att skriva XML-kod | Övning i XML/DTD" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Övning i XML/DTD" />
+  <meta name="twitter:title" content="2 Att skriva XML-kod | Övning i XML/DTD" />
   
   
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="att-skriva-xml-kod.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="valformad-xml.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -164,30 +164,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Övning i XML/DTD</h1>
-<p class="author"><em>Yoshiko Nordeborg</em></p>
-<p class="author"><em>Björn Ekström</em></p>
+<div id="att-skriva-xml-kod" class="section level1">
+<h1><span class="header-section-number">2</span> Att skriva XML-kod</h1>
+<p>Vi inleder med att skapa en fil för att sedan börja koda XML. Därefter kommer vi att kontrollera att koden är korrekt skriven.</p>
+<div id="skapa-en-xml-fil" class="section level2">
+<h2><span class="header-section-number">2.1</span> Skapa en XML-fil</h2>
+<p>Först skapar du en mapp någonstans på din dator. God praxis är att inte döpa mappar och filer till namn som innehåller å, ä, ö eller mellanslag.</p>
+<p>Därefter öppnar du EditiX eller
+XMLSpear. Om du använder skolans datorer hittar du dessa program via
+<em>Start-menyn -&gt; HB -&gt; Developer Tools</em>.</p>
+<p>Forsättningsvis kommer instruktionerna skilja sig något beroende på vilket av programmen du använder. Håll därför koll på rubrikerna.</p>
+<div id="editix" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> EditiX</h3>
+<p>Först försäkrar du dig om att kodningschemat är UTF-8 genom att klicka
+<em>File -&gt; Encoding -&gt; UTF-8</em>. Sedan skapar du en ny XML-fil genom att
+klicka <em>File -&gt; New document</em>. Välj därefter <em>Standard XML
+document</em> i det lilla fönstret New document och klicka OK.</p>
+<p>Ett nytt dokument öppnas i editorn. På första raden ska det stå:</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span></code></pre>
+<p>Filen har dock inte sparats än. Du måste därför döpa filen och bestämma var du vill
+spara den. Klicka <em>File -&gt; Save as</em> och spara filen i den mapp som du har skapat. Kontrollera att XML document (*.xml) är
+valt som filtyp.</p>
 </div>
-<div id="inledning" class="section level1">
-<h1><span class="header-section-number">1</span> Inledning</h1>
-<p>Den här övningen syftar till att ge en inledande förståelse till XML, <em>Extensible markup language</em>.</p>
-<p>Du kommer att lära dig:</p>
-<ul>
-<li>Hur XML-kod skrivs och kontrolleras.</li>
-<li>Vad välformad XML innebär.</li>
-<li>Vad giltig XML innebär.</li>
-<li>Hur du kan utöka en XML-fil och hålla den välformad och giltig.</li>
-</ul>
-<p>Lycka till!</p>
+<div id="xmlspear" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> XMLSpear</h3>
+<p>Skapa en ny fil genom att klicka <em>File -&gt; New</em>. Välj <em>XML File</em> som
+&quot;Document type&quot; i det lilla fönstret New Document och klicka OK.</p>
+<p>Ett nytt dokument öppnas i editorn. På första raden ska det stå:</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span></code></pre>
+<p>Filen har dock inte sparats än. Du måste därför döpa filen och bestämma var du vill
+spara den. Klicka <em>File -&gt; Save as</em>. Det ska då
+komma upp en <em>Save As</em>-ruta. Klicka på knappen <em>Options…</em> och
+kontrollera att <em>File Encoding</em> är satt till UTF-8. Spara filen i den mapp som du har skapat. Kontrollera att <em>XML document (*.xml)</em> är
+valt som filtyp.</p>
+</div>
+</div>
+<div id="borja-koda" class="section level2">
+<h2><span class="header-section-number">2.2</span> Börja koda!</h2>
+<p>Du kan se i fliken ovan dokumentet att den har fått namnet du valt. Om
+du ställer muspekaren på filnamnet så visas också var filen är sparad. På
+så sätt kan du skilja på filer med samma namn sparade i olika mappar
+men du bör för säkerhets skull undvika att döpa flera filer med samma namn.</p>
+<p>Den allra första raden högst upp i dokumentet ska du inte röra, det
+är den så kallade XML-deklarationen. Inte ens ett mellanslag får förekomma före den.</p>
+<p>Kopiera koden nedan och klistra in i din XML-editor. Se till XML-deklarationen inte förekommer två gånger.</p>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;collection&gt;</span>
+  <span class="kw">&lt;book</span><span class="ot"> id=</span><span class="st">&quot;a1&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;isbn&gt;</span>0385<span class="kw">&lt;/isbn&gt;</span>
+    <span class="kw">&lt;title&gt;</span>The Da Vinchi Code<span class="kw">&lt;/title&gt;</span>
+    <span class="kw">&lt;author</span><span class="ot"> sex=</span><span class="st">&quot;male&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;gname&gt;</span>Dan<span class="kw">&lt;/gname&gt;</span>
+    <span class="kw">&lt;fname&gt;</span>Brown<span class="kw">&lt;/fname&gt;</span>
+    <span class="kw">&lt;/author&gt;</span>
+    <span class="kw">&lt;pages&gt;</span>454 sidor<span class="kw">&lt;/pages&gt;</span>
+  <span class="kw">&lt;/book&gt;</span>
+<span class="kw">&lt;/collection&gt;</span> </code></pre>
+<p>Spara sedan filen igen. Nu har din XML-fil innehåll men är än så länge inte länkad
+till en DTD.</p>
+<blockquote>
+<p>Läs mer om XML-deklarationen och kommentartaggen på <a href="http://www.w3schools.com/xml/default.asp">w3schools.com's XML tutorial</a>.</p>
+</blockquote>
+</div>
+<div id="kontrollera-koden" class="section level2">
+<h2><span class="header-section-number">2.3</span> Kontrollera koden</h2>
+<p>När man kodar är det viktigt att tänka på att koden är korrekt. Därför ska vi nu se till att den är det.</p>
+<div id="editix-1" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> EditiX</h3>
+<p>Med <code>Ctrl</code> + <code>K</code> aktiveras EditiX:s XML-kontrollfunktion.
+Ser du något felmeddelande av EditiX i nedersta
+delen av editorn? Om så är fallet så bryter du mot någon XML-regel och
+därmed är filen inte välformad.</p>
+<p>Försök att rätta till eventuella problem innan du går till
+nästa steg. Be om hjälp av en lärare eller av kurskamrater om du behöver. Spara och
+tryck <code>Ctrl</code> + <code>K</code> igen för att kontrollera koden på nytt.</p>
+</div>
+<div id="xmlspear-1" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> XMLSpear</h3>
+<p>Nederst under kodfältet finns en flik som heter &quot;Problems&quot;.
+Om allting är som det ska så visas <code>Document is wellformed XML</code>. I annat fall
+dyker felmeddelanden upp där. Om så är fallet så bryter du mot någon
+XML-regel och därmed är filen inte välformad.</p>
+<p>Försök att rätta till eventuella problem innan du går till nästa steg. Be om hjälp av en lärare eller av kurskamrater om du behöver.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="att-skriva-xml-kod.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="valformad-xml.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

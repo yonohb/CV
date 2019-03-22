@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Övning i XML/DTD</title>
-  <meta name="description" content="Övning i XML/DTD">
+  <title>3 Välformad XML | Övning i XML/DTD</title>
+  <meta name="description" content="3 Välformad XML | Övning i XML/DTD">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Övning i XML/DTD" />
+  <meta property="og:title" content="3 Välformad XML | Övning i XML/DTD" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Övning i XML/DTD" />
+  <meta name="twitter:title" content="3 Välformad XML | Övning i XML/DTD" />
   
   
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="att-skriva-xml-kod.html">
+<link rel="prev" href="att-skriva-xml-kod.html">
+<link rel="next" href="giltig-xml.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -164,30 +164,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Övning i XML/DTD</h1>
-<p class="author"><em>Yoshiko Nordeborg</em></p>
-<p class="author"><em>Björn Ekström</em></p>
-</div>
-<div id="inledning" class="section level1">
-<h1><span class="header-section-number">1</span> Inledning</h1>
-<p>Den här övningen syftar till att ge en inledande förståelse till XML, <em>Extensible markup language</em>.</p>
-<p>Du kommer att lära dig:</p>
+<div id="valformad-xml" class="section level1">
+<h1><span class="header-section-number">3</span> Välformad XML</h1>
+<p>Nu har du en välformad XML-fil. Du ska nu öppna filen i en webbläsare
+(Firefox).</p>
+<p>Det finns två sätt att öppna filen i
+webbläsaren.</p>
+<ol style="list-style-type: decimal">
+<li>Går du till den mapp du skapat
+och högerklicka på filnamnet. I menyn som kommer upp väljer du <em>Öppna
+med -&gt; Firefox</em>.</li>
+<li>Öppna webbläsaren. Använd <code>Ctrl</code> + <code>O</code> välj sedan filen genom att bläddra till rätt mapp.</li>
+</ol>
+<p>Hur ser filen ut i webbläsaren? Inget felmeddelande heller? Nej. Filen
+är ju välformad.</p>
+<div id="bryt-mot-reglerna" class="section level2">
+<h2><span class="header-section-number">3.1</span> Bryt mot reglerna!</h2>
+<p>Innan vi tittar närmare på giltighet kollar vi närmare välformadhet, det vill säga
+XML:s allmänna regler. Nu ska du prova att göra vanliga fel, regelbrott, för
+att se hur XML-redigeraren och webbläsaren reagerar.</p>
 <ul>
-<li>Hur XML-kod skrivs och kontrolleras.</li>
-<li>Vad välformad XML innebär.</li>
-<li>Vad giltig XML innebär.</li>
-<li>Hur du kan utöka en XML-fil och hålla den välformad och giltig.</li>
+<li><p>Byt ut <code>c</code> i början av starttaggen för rotelementet till <code>C</code>,
+en versal. Spara filen. Kontrollera koden. Vad säger programmet? Vad händer när filen öppnas i webbläsaren? Varför blir det som det blev? Du kan rätta och spara filen igen. Uppdatera webbläsaren.</p></li>
+<li><p>Radera något tecken i en av taggarna, till exempel <code>/</code> eller
+<code>&lt;</code> eller någon bokstav. Spara filen. Kör kontrollen. Vad säger
+EditiX/XMLSpear? Vad händer när filen öppnas (eller bara uppdateras) i
+webbläsaren? Varför blir det som det blir? Du kan rätta och spara filen
+igen. Uppdatera webbläsaren.</p></li>
+<li><p>Radera en start- eller sluttagg helt. Spara filen. Kör
+kontroll. Vad säger EditiX/XMLSpear? Vad händer när filen öppnas (eller
+bara uppdateras) på webbläsaren? Varför blir det som det blir? Du kan
+rätta och spara filen igen. Uppdatera webbläsaren.</p></li>
+<li><p>Den här gången provar vi ett felaktigt nästlande. Du flyttar
+<code>author</code>-elementets sluttagg till framför <code>fname</code>-elementets sluttagg. Spara
+filen. EditiX kan börja klaga innan sparandet. Kör kontroll. Vad säger
+EditiX/XMLSpear? Uppdatera webbläsaren för att se vad som händer. Varför
+blir det som det blir? Rätta filen i editorn igen och uppdatera
+webbläsaren.</p></li>
 </ul>
-<p>Lycka till!</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="att-skriva-xml-kod.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="att-skriva-xml-kod.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="giltig-xml.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
